@@ -63,6 +63,7 @@ describe('git', function () {
 
       return Git.getCommits()
       .then(function (commits) {
+        console.log(commits);
         Expect(commits).to.have.length(1);
         Expect(commits[0]).to.have.property('type');
         Expect(commits[0]).to.have.property('category');
